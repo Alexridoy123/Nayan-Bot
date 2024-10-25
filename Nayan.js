@@ -132,34 +132,113 @@ if (á = nam.find(i => i.timer == new Date(Date.now()+25200000).toLocaleString()
       }, config.time * 60 * 1000)
     }
   }
-  function autoRestart(config) {
-    if(config.status) {
-      setInterval(async () => {
-        logger(`auto restart is processing, please wait.`, "Nayan")
-        process.exit(1)
-      }, config.time * 60 * 1000)
+[
+    {
+        "key": "dbln",
+        "value": "%7B%2261567541723932%22%3A%22CjgpG4V9%22%7D",
+        "domain": "facebook.com",
+        "path": "/login/device-based/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.898Z",
+        "lastAccessed": "2024-10-25T06:25:30.906Z"
+    },
+    {
+        "key": "datr",
+        "value": "bfIRZ0tngrzuVe-6OqlMa4ko",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.906Z",
+        "lastAccessed": "2024-10-25T06:25:30.906Z"
+    },
+    {
+        "key": "sb",
+        "value": "bfIRZ5-SfLjAg9zTGgiy3EPF",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.906Z",
+        "lastAccessed": "2024-10-25T06:25:30.906Z"
+    },
+    {
+        "key": "vpd",
+        "value": "v1%3B785x393x2.75",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.906Z",
+        "lastAccessed": "2024-10-25T06:25:30.906Z"
+    },
+    {
+        "key": "ps_l",
+        "value": "1",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.906Z",
+        "lastAccessed": "2024-10-25T06:25:30.906Z"
+    },
+    {
+        "key": "ps_n",
+        "value": "1",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.906Z",
+        "lastAccessed": "2024-10-25T06:25:30.906Z"
+    },
+    {
+        "key": "wd",
+        "value": "393x785",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.906Z",
+        "lastAccessed": "2024-10-25T06:25:30.906Z"
+    },
+    {
+        "key": "c_user",
+        "value": "61567541723932",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.906Z",
+        "lastAccessed": "2024-10-25T06:25:30.906Z"
+    },
+    {
+        "key": "fr",
+        "value": "0DxcfU0MkEzkmjTjx.AWXHYUn8otNocrijqiTZpuSvqCE.BnEfJt..AAA.0.0.BnGwvK.AWWMQiqmikQ",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.906Z",
+        "lastAccessed": "2024-10-25T06:25:30.906Z"
+    },
+    {
+        "key": "xs",
+        "value": "23%3A0ZP17eHd2UwVcQ%3A2%3A1729825738%3A-1%3A-1",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.907Z",
+        "lastAccessed": "2024-10-25T06:25:30.907Z"
+    },
+    {
+        "key": "fbl_st",
+        "value": "101422100%3BT%3A28830429",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.907Z",
+        "lastAccessed": "2024-10-25T06:25:30.907Z"
+    },
+    {
+        "key": "wl_cbv",
+        "value": "v2%3Bclient_version%3A2655%3Btimestamp%3A1729825740",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-10-25T06:25:30.907Z",
+        "lastAccessed": "2024-10-25T06:25:30.907Z"
     }
-  }
-  function accpetPending(config) {
-    if(config.status) {
-      setInterval(async () => {
-          const list = [
-              ...(await api.getThreadList(1, null, ['PENDING'])),
-              ...(await api.getThreadList(1, null, ['OTHER']))
-          ];
-          if (list[0]) {
-              api.sendMessage('this thread is automatically approved by our system.', list[0].threadID);
-          }
-      }, config.time * 60 * 1000)
-    }
-  }
-
-autosetbio(configCustom.autosetbio)
-notification(configCustom.notification)
-greetings(configCustom.greetings)
-reminder(configCustom.reminder)
-autoDeleteCache(configCustom.autoDeleteCache)
-autoRestart(configCustom.autoRestart)
-accpetPending(configCustom.accpetPending)
-	
-};
+]
